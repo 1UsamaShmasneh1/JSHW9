@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Images{
+            constructor(){};
+
+            width = 50;
+            height = 100;
+            artist = {
+                name: 'De Vinci',
+                originCountry: 'Italy'
+            };
+
+            clone(){
+                img = new Images();
+                img.width = this.width;
+                img.height = this.height;
+                img.artist = this.artist;
+                return img;
+            };
+        }
+
+        var img = new Images();
+        console.log("img",img);
+
+        var img1 = img.clone();
+        img1.width = 90;
+        img1.height = 70;
+        img1.artist.name = "usama";
+        img1.artist.originCountry = "israel";
+        console.log("img1",img1);
+    </script>
+</head>
+<body>
+</body>
+</html>
